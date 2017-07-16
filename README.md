@@ -1,27 +1,7 @@
-# graph
+### 和朋友一起住，因为每个人都会买大家一起用的东西，AA算起来比较麻烦，使用类似于寝室长制度也不适合国情，所以就花了一点小时间做了一个很简单的小工具，可以根据平分的人数，计算出每个人应该AA的钱，还应该补多少钱，并且进行账目管理。
+#### 模块相关
+##### vue,vue-resource,mongodb, koa2-restful,koa2,mongodb,webpack
+#### UI:Element-ui
+#### 用法
+##### npm install, npm run build, node index.js
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
