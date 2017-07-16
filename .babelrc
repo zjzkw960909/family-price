@@ -1,6 +1,7 @@
 {
   "presets": [
-    ["env", { "targets": {"node": true}}],
+    ["env", { "targets": {"node": true} }],
+    ["es2015", {"modules": false}],
     "stage-2"
   ],
   "plugins": ["transform-runtime"],

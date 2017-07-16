@@ -28,12 +28,6 @@ module.exports = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      chunks: ['vendor', 'page'],
-      inject: true
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'admin.html',
-      template: 'admin.html',
       chunks: ['vendor', 'admin'],
       inject: true
     }),

@@ -9,7 +9,6 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    page: './src/page/page.js',
     admin: './src/admin/admin.js',
     vendor: ['vue', 'vuex', 'vue-resource', 'vue-router', 'element-ui']
   },

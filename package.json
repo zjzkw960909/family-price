@@ -12,6 +12,7 @@
     "test": "npm run unit"
   },
   "dependencies": {
+    "koa-static": "3.0.0",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1"
   },
@@ -20,8 +21,10 @@
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-istanbul": "^4.1.1",
+    "babel-plugin-transform-regenerator": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-env": "^1.3.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
     "chai": "^3.5.0",
