@@ -70,7 +70,7 @@ export default {
             this.search(page)
         },
         initSelect () {
-            this.$http.get('http://localhost:3000/api/price?limit=999').then((res) => {
+            this.$http.get('http://localhost:3001/api/price?limit=999').then((res) => {
                 if (this.errBack(res)) {
                     return
                 }
@@ -86,7 +86,7 @@ export default {
             ave = total / this.person.length
             this.person.map((v) => {
                 v.shouldPay = ave.toFixed(2) + '元'
-                v.lackPay = ave.toFixed(2) - v.value + '元'
+                v.lackPay = (ave - v.value).toFixed(2) + '元'
                 v.havePay = Number(v.value).toFixed(2) + '元'
                 return v
             })
@@ -104,7 +104,7 @@ export default {
                 cTime: new Date().toLocaleDateString()
             }
             if (!this.edit) {
-                return this.$http.post('http://localhost:3000/api/price', data).then((res) => {
+                return this.$http.post('http://localhost:3001/api/price', data).then((res) => {
                     if (this.errBack(res)) {
                         return
                     }
@@ -113,7 +113,7 @@ export default {
                     this.loading = false
                 })
             }
-            this.$http.put(`http://localhost:3000/api/price/${this.edit}`, data).then((res) => {
+            this.$http.put(`http://localhost:3001/api/price/${this.edit}`, data).then((res) => {
                 if (this.errBack(res)) {
                     return
                 }
@@ -136,7 +136,7 @@ export default {
             } else {
                 id = this.selectValue
             }
-            this.$http.get('http://localhost:3000/api/price/' + id).then((res) => {
+            this.$http.get('http://localhost:3001/api/price/' + id).then((res) => {
                 if (this.errBack(res)) {
                     return
                 }

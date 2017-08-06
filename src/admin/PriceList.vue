@@ -34,7 +34,7 @@ export default {
             this._getList({params: {}})
         },
         _getList (e) {
-            this.$http.get('http://localhost:3000/api/price', e).then((res) => {
+            this.$http.get('http://localhost:3001/api/price', e).then((res) => {
                 if (this.errBack(res)) {
                     return
                 }
@@ -65,7 +65,7 @@ export default {
                     if (action === 'confirm') {
                         instance.confirmButtonLoading = true;
                         instance.confirmButtonText = '执行中...';
-                        this.$http.delete(`http://localhost:3000/api/price/${e.row._id}`).then((res) => {
+                        this.$http.delete(`http://localhost:3001/api/price/${e.row._id}`).then((res) => {
                             if (this.errBack(res)) {
                                 return
                             }
